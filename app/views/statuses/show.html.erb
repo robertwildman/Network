@@ -16,7 +16,7 @@
 </p>
 <p>
   <strong>Time Ago:</strong>
-<%= link_to time_ago_in_words(status.created_at) + " ago", status %>
+<%= link_to time_ago_in_words(@status.created_at) + " ago", @status %>
 </p>
 
 <%= link_to 'Edit', edit_status_path(@status) %> |

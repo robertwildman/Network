@@ -40,5 +40,6 @@ gem 'spring',        group: :development
 
 gem 'autoprefixer-rails'
 gem 'simple_form'
+gem 'state_machine'
 gem 'devise'
 gem 'protected_attributes'

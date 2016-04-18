@@ -5,7 +5,7 @@ class StatusesController < ApplicationController
   # GET /statuses.json
   def index
     @statuses = Status.all
-
+    @user = current_user
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @statuses }
@@ -42,7 +42,7 @@ class StatusesController < ApplicationController
   # POST /statuses
   # POST /statuses.json
   def create
-    @status = Status.new(params[:status])
+    @status = current_user.statuses.new(params[:status])
 
     respond_to do |format|
       if @status.save
